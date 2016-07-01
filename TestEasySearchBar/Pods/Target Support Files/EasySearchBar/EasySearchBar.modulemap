@@ -1,0 +1,6 @@
+framework module EasySearchBar {
+  umbrella header "EasySearchBar-umbrella.h"
+
+  export *
+  module * { export * }
+}
