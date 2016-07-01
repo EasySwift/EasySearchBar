@@ -28,61 +28,44 @@ Add the following to your Podfile:
 	
 ## Example
 	import UIKit
-	import EasySwift
+	import EasySearchBar
 
-	class ClassifyVC: BaseVC {
+	class ViewController: UIViewController {
 
-    private var searchBar: YXJ_SearchBar?
-
-    @IBOutlet weak var titleView1: UIView!
+    private var searchBar: EasySearchBar?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    }
-
-    override func loadUI() {
-
-        titleView1.w = ScreenWidth
-
         // 搜索框
-        self.searchBar = YXJ_SearchBar(frame: CGRectMake(0, (self.titleView1.h - 30) / 2, titleView1.w - 60, 30))
-        self.searchBar?.YXJ_searchBarPlaceholder = "搜索课程"
-        self.searchBar?.YXJ_backgroundColor = UIColor(hexString: "#F2F2F2")
-        self.titleView1.addSubview(self.searchBar!)
+        self.searchBar = EasySearchBar(frame: CGRectMake(0, 100, self.view.frame.size.width, 30))
+        self.searchBar?.easySearchBarPlaceholder = "搜索课程"
+        self.searchBar?.easyBackgroundColor = UIColor.cyanColor()
+        self.view.addSubview(self.searchBar!)
 
-        self.searchBar?.YXJ_cancelBTClickedBlock({ (search) in
-            log.debug("点击了取消按钮")
+        self.searchBar?.easyCancelBTClickedBlock({ (search) in
+            print("点击了取消按钮")
             search.text = ""
         })
-        self.searchBar?.YXJ_SearchBarTextDidBeginEditingBlock({ (search) in
-            log.debug("开始编辑" + search.text!)
+        self.searchBar?.easySearchBarTextDidBeginEditingBlock({ (search) in
+            print("开始编辑" + search.text!)
         })
-        self.searchBar?.YXJ_SearchBarTextDidChangeBlock({ (search, searchText) in
-            log.debug("内容改变" + searchText)
+        self.searchBar?.easySearchBarTextDidChangeBlock({ (search, searchText) in
+            print("内容改变" + searchText)
         })
-        self.searchBar?.YXJ_SearchBarTextDidEndEditingBlock({ (search) in
-            log.debug("结束输入")
+        self.searchBar?.easySearchBarTextDidEndEditingBlock({ (search) in
+            print("结束输入")
         })
-        self.searchBar?.YXJ_SearchBarSearchButtonClickedBlock({ (search) in
-            log.debug("点击键盘搜索" + search.text!)
+        self.searchBar?.easySearchBarSearchButtonClickedBlock({ (search) in
+            print("点击键盘搜索" + search.text!)
         })
-
-        // 历史按钮
-        let btn = UIButton(frame: CGRectMake(titleView1.w - 62, 0, 50, titleView1.h))
-        btn.setImage(UIImage(named: "history"), forState: UIControlState.Normal)
-        self.titleView1.addSubview(btn)
-        btn.bnd_controlEvent.filter { (event) -> Bool in
-            return event == UIControlEvents.TouchUpInside
-        }.observe { [weak self](event) in
-            self?.pushWithOtherStoryBoard_Swift("HistoryVC", storyBoardName: "Home")
-        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-}
+
+	}
 
     
 ## 极致框架
