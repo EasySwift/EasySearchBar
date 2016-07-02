@@ -12,6 +12,9 @@
 ## Features
 * 自定义SearchBar
 
+### ScreenShot
+![image](https://github.com/stubbornnessness/EasySearchBar/blob/master/TestEasySearchBar/EasyDropDownMenuTest/demo.gif)
+
 ## System Requirements
 iOS 8.0 or above
 
