@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE7535471D27613800F37FB6 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = DE7535461D27613800F37FB6 /* demo.gif */; };
 		DEC035F91D267817008F3506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC035F81D267817008F3506 /* AppDelegate.swift */; };
 		DEC035FB1D267817008F3506 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC035FA1D267817008F3506 /* ViewController.swift */; };
 		DEC035FE1D267817008F3506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC035FC1D267817008F3506 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		6CF76CC091152FE82902185B /* Pods-TestEasySearchBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestEasySearchBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestEasySearchBar/Pods-TestEasySearchBar.release.xcconfig"; sourceTree = "<group>"; };
 		AA24A15C98073C27540D5CF7 /* Pods_TestEasySearchBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestEasySearchBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3C8FC2D284B475A048C3F0 /* Pods-TestEasySearchBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestEasySearchBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestEasySearchBar/Pods-TestEasySearchBar.debug.xcconfig"; sourceTree = "<group>"; };
+		DE7535461D27613800F37FB6 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 		DEC035F51D267817008F3506 /* TestEasySearchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestEasySearchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC035F81D267817008F3506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC035FA1D267817008F3506 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		DEC035F71D267817008F3506 /* TestEasySearchBar */ = {
 			isa = PBXGroup;
 			children = (
+				DE7535461D27613800F37FB6 /* demo.gif */,
 				DEC035F81D267817008F3506 /* AppDelegate.swift */,
 				DEC035FA1D267817008F3506 /* ViewController.swift */,
 				DEC035FC1D267817008F3506 /* Main.storyboard */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEC036031D267817008F3506 /* LaunchScreen.storyboard in Resources */,
+				DE7535471D27613800F37FB6 /* demo.gif in Resources */,
 				DEC036001D267817008F3506 /* Assets.xcassets in Resources */,
 				DEC035FE1D267817008F3506 /* Main.storyboard in Resources */,
 			);
