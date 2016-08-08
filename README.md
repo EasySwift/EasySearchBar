@@ -13,7 +13,7 @@
 * 自定义SearchBar
 
 ### ScreenShot
-![image](https://github.com/stubbornnessness/EasySearchBar/blob/master/TestEasySearchBar/TestEasySearchBar/demo.gif)
+![image](http://120.27.93.73/files/myPublicProject/EasySearchBar1.gif)
 
 ## System Requirements
 iOS 8.0 or above
