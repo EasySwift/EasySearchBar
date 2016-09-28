@@ -11,32 +11,32 @@ import EasySearchBar
 
 class ViewController: UIViewController {
 
-    private var searchBar: EasySearchBar?
+    fileprivate var searchBar: EasySearchBar?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // 搜索框
-        self.searchBar = EasySearchBar(frame: CGRectMake(0, 100, self.view.frame.size.width, 30))
+        self.searchBar = EasySearchBar(frame: CGRect(x: 0, y: 100, width: self.view.frame.size.width, height: 30))
         self.searchBar?.easySearchBarPlaceholder = "搜索课程"
-        self.searchBar?.easyBackgroundColor = UIColor.cyanColor()
+        self.searchBar?.easyBackgroundColor = UIColor.cyan
         self.view.addSubview(self.searchBar!)
 
         self.searchBar?.easyCancelBTClickedBlock({ (search) in
             print("点击了取消按钮")
-            search.text = ""
+            search?.text = ""
         })
-        self.searchBar?.easySearchBarTextDidBeginEditingBlock({ (search) in
-            print("开始编辑" + search.text!)
+        self.searchBar?.easySearchBarTextDidBeginEditing({ (search) in
+            print("开始编辑" + (search?.text!)!)
         })
-        self.searchBar?.easySearchBarTextDidChangeBlock({ (search, searchText) in
-            print("内容改变" + searchText)
+        self.searchBar?.easySearchBarTextDidChange({ (search, searchText) in
+            print("内容改变" + searchText!)
         })
-        self.searchBar?.easySearchBarTextDidEndEditingBlock({ (search) in
+        self.searchBar?.easySearchBarTextDidEndEditing({ (search) in
             print("结束输入")
         })
         self.searchBar?.easySearchBarSearchButtonClickedBlock({ (search) in
-            print("点击键盘搜索" + search.text!)
+            print("点击键盘搜索" + (search?.text!)!)
         })
     }
 
